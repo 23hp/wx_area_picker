@@ -8,6 +8,7 @@
 ## 功能：
 
 - 支持一至四级地址选择
+- 左右滑动切换地址层级
 - 支持选择部分地址（不选完）
 - 灵活的地址数据源，可以从开发者服务器数据获取数据，也可以读取内置地址数据
 - 返回每一级地址的ID及名称
@@ -74,7 +75,7 @@ _area_level控制地址的层级，_area_selectAllArea为false时，用户可以
         wx.showLoading({ title: '加载中' });
 
         service.getNextAreaList(areaId).then(data => {
-            //确保返回的数据一定有ID和name这两个字段
+            //确保返回的数据一定有id和name这两个字段
             _area_areaList[level] = data;
             this.setData({ 
                 _area_areaList: _area_areaList 

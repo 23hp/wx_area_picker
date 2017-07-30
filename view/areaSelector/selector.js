@@ -67,7 +67,7 @@ export let AreaPicker = {
     let _area_areaList = this.data._area_areaList;
     wx.showLoading({ title: '加载中' });
     service.getNextAreaList(areaId).then(data => {
-      //确保返回的数据一定有ID和name这两个字段
+      //确保返回数据一定有id和name这两个字段
       _area_areaList[level] = data;
       this.setData({ _area_areaList: _area_areaList });
       if (nextAreaList.length < 1) {//下级地址为空
