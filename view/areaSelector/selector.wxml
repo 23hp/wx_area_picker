@@ -1,0 +1,28 @@
+<view class="areaSelectorBg" wx:if="{{_area_showSelector}}" catchtap="_area_hideAreaSelector">
+    <view class="areaContainer" catchtap>
+        <view class="areaHead" >
+            <block wx:for="{{_area_areaList}}" wx:key="*this">
+                <view bindtap="_area_reselectArea" data-level="{{index}}" wx:if="{{item}}"class="areaHeadItem pressLighter {{_area_activeTab==index&&'areaHeadItemChecked'}}">
+                    {{_area_checkedIndexArr[index]!=null?item[_area_checkedIndexArr[index]].name:'请选择'}}
+                </view>
+            </block>
+            <text style="flex: 1"/>
+            <text wx:if="{{_area_selectAllArea}}" catchtap="_area_hideAreaSelector" class="areaClose pressLighter">关闭</text>
+            <text wx:else catchtap="_area_commitArea" class="areaCommit pressLighter">确定</text>
+        </view>
+        <swiper class="areaBody" current="{{_area_activeTab}}" bindchange="_area_areaSwipe">
+            <block wx:for="{{_area_areaList}}" wx:if="{{item}}" wx:key="*this" wx:for-index="level">
+                <swiper-item>
+                    <scroll-view scroll-y="true">
+                        <view class="itemContainer">
+                        <block wx:for="{{item}}" wx:key="id"  >
+                           <text bindtap="_area_selectAreaItem" class="areaBodyItem pressLighter"
+                                 data-id="{{item.id}}" data-index="{{index}}" data-level="{{level}}">{{item.name}}</text>
+                        </block>
+                        </view>
+                    </scroll-view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</view>

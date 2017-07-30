@@ -1,0 +1,15 @@
+/**app.wxss**/
+
+/*页面默认样式*/
+page {
+    background-color: #eeeeee;
+    font-family: -apple-system-font,Helvetica Neue, Helvetica,微软雅黑,"Microsoft YaHei",  sans-serif;
+}
+/*默认按压效果*/
+.pressLighter:active {
+    opacity: 0.8;
+}
+/*默认按压效果*/
+.pressDarker:active {
+    background-color:rgba(0,0,0,0.1) ;
+}

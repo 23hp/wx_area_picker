@@ -1,0 +1,13 @@
+<view class="row" bindtap="showAreaSelector">
+  <view class="flex" wx:if="{{province&&province.name}}">
+    {{province.name}} {{city.name}} {{district.name}} {{street.name}}
+  </view>
+  <view class="flex" wx:else>选择地区</view>
+  <image src="/images/ic_go.png" class="icGo"></image>
+</view>
+<text class="describe">
+总共地址级别：{{_area_level}}
+是否要求选到最后一级：{{_area_selectAllArea}}
+</text>
+
+<include src="../../view/areaSelector/selector.wxml" />

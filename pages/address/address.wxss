@@ -1,0 +1,27 @@
+/* 引入地址选择器样式 */
+@import "/view/areaSelector/selector.wxss";
+
+.row {
+  background: #fff;
+  border-bottom: 1rpx solid #e7e7e7;
+  padding: 30rpx;
+   font-size: 28rpx;
+  color: #353535;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icGo{
+  width: 14rpx;
+  height: 25rpx;
+}
+.flex{
+  flex: 1;
+}
+.describe{
+  display: block;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  color: #666;
+}

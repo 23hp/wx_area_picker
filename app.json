@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/address/address"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f3a077",
+    "navigationBarTitleText": "地址选择器",
+    "navigationBarTextStyle":"white"
+  }
+}
