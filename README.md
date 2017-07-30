@@ -2,7 +2,7 @@
 
 高仿京东，功能强大可配置的支持选择器
 
-![实例效果](https://github.com/23hp/wx_network/blob/master/pic_loading.jpg)
+![实例效果](https://github.com/23hp/wx_area_picker/blob/master/sample.PNG)
 
 
 ## 功能：
