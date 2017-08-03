@@ -1,6 +1,6 @@
 # 微信小程序-地址选择器
 
-高仿京东，功能强大可配置的支持选择器
+高仿京东，功能强大可配置的地址选择器
 
 ![实例效果](https://github.com/23hp/wx_area_picker/blob/master/sample.PNG)
 
