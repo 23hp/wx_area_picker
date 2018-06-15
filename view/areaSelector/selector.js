@@ -70,6 +70,13 @@ export let AreaPicker = {
       //确保返回数据一定有id和name这两个字段
       _area_areaList[level] = data;
       this.setData({ _area_areaList: _area_areaList });
+      let nextAreaList = [];
+      for (let item of data) {
+        nextAreaList.push({
+          id: item[1],
+          name: item[0]
+        })
+      }
       if (nextAreaList.length < 1) {//下级地址为空
         this._area_commitArea();
       } else {
@@ -77,7 +84,8 @@ export let AreaPicker = {
       }
       wx.hideLoading();
     }).catch(e => {
-      wx.showToast({ title: `获取地区失败，${JSON.stringify(e)}`, image: '/image/warn.png' })
+      console.error(e);
+      wx.showToast({ title: `获取地区失败`, image: '/images/warn.png' })
     });
   },
   _area_areaSwipe(e) {
